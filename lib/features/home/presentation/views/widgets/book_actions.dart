@@ -18,7 +18,8 @@ class BookActions extends StatelessWidget {
             ),
             textColor: Colors.black,
           ),
-        ),Expanded(
+        ),
+        Expanded(
           child: CustomButton(
             text: "Free Preview",
             backgraoundColor: Color(0xffEF8262),
