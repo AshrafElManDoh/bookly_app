@@ -1,10 +1,9 @@
 part of 'featured_books_cubit.dart';
 
-abstract class FeaturedBooksState extends Equatable {
+abstract class FeaturedBooksState  {
   const FeaturedBooksState();
 
-  @override
-  List<Object> get props => [];
+ 
 }
 
 class FeaturedBooksInitial extends FeaturedBooksState {}
