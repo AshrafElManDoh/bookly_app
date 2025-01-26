@@ -23,7 +23,7 @@ class BookDetailsViewBody extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.of(context).size.width * 0.18),
-              child: const CustomBookItem(),
+              child: const CustomBookItem(imageURL: "",),
             ),
             const SizedBox(
               height: 43,
