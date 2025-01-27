@@ -15,7 +15,7 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.bookDetailsView);
+        GoRouter.of(context).push(AppRouter.bookDetailsView , extra: book);
       },
       child: SizedBox(
         height: 120,
@@ -42,8 +42,10 @@ class BestSellerListViewItem extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                   Text(
-                    book.volumeInfo!.authors?[0] ?? "None" ,
+                  Text(
+                    book.volumeInfo!.authors?[0] ?? "None",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(
@@ -59,7 +61,7 @@ class BestSellerListViewItem extends StatelessWidget {
                           // color: Colors.white
                         ),
                       ),
-                       BookRating(
+                      BookRating(
                         rating: book.volumeInfo!.averageRating ?? 0,
                         count: book.volumeInfo!.count ?? 0,
                       )
